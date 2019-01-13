@@ -4,28 +4,29 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " deoplete enable at startup
 " if has('nvim')
-let g:deoplete#enable_at_startup = 1
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
+" let g:deoplete#enable_at_startup = 1
+" if !exists('g:deoplete#omni#input_patterns')
+"   let g:deoplete#omni#input_patterns = {}
+" endif
 " let g:deoplete#disable_auto_complete = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " omnifuncs
-augroup omnifuncs
-  autocmd!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-augroup end
+" augroup omnifuncs
+"   autocmd!
+"   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+"   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+"   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+"   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" augroup end
+
 " tern
-if exists('g:plugs["tern_for_vim"]')
-  let g:tern_show_argument_hints = 'on_hold'
-  let g:tern_show_signature_in_pum = 1
-  autocmd FileType javascript setlocal omnifunc=tern#Complete
-endif
+" if exists('g:plugs["tern_for_vim"]')
+"   let g:tern_show_argument_hints = 'on_hold'
+"   let g:tern_show_signature_in_pum = 1
+"   autocmd FileType javascript setlocal omnifunc=tern#Complete
+" endif
 
 " NERDTree
 " automatic open NERDTree when open directory
@@ -59,11 +60,14 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
 " }}}
 " YouCompleteMe settings {{{
-"    let g:ycm_server_python_interpreter = 'usr/bin/python3'
-"	let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-"	let g:ycm_show_diagnostics_ui = 0
-"	let g:ycm_register_as_syntastic_checker = 1
-"    let g:ycm_disable_for_files_larger_than_kb = 180
+let g:ycm_disable_for_files_larger_than_kb = 10
+let g:ycm_python_interpreter_path = ''
+let g:ycm_python_sys_path = []
+let g:ycm_extra_conf_vim_data = [
+  \  'g:ycm_python_interpreter_path',
+  \  'g:ycm_python_sys_path'
+  \]
+let g:ycm_global_ycm_extra_conf = '~/global_extra_conf.py'
 " }}}
 
 " }}}
@@ -77,3 +81,10 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 "   autocmd BufWinLeave * mkview
 "   autocmd BufWinEnter * silent loadview
 " augroup END
+
+" Snippets configurations
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:UltiSnipsEditSplit="vertical"
