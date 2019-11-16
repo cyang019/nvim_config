@@ -2,16 +2,17 @@
 " - For Neovim: ~/.local/share/nvim/plugged Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'Valloric/YouCompleteMe'   " better tab completion
+Plug 'xavierd/clang_complete'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'        " cool window decoration
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fireplace'
-Plug 'nsf/gocode'
+" Plug 'tpope/vim-fireplace'
+" Plug 'nsf/gocode'
 Plug 'flazz/vim-colorschemes'   " Colors
 Plug 'tpope/vim-fugitive'       " git wrapper for vim
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Konfekt/FastFold'
+" Plug 'Konfekt/FastFold'
 Plug 'hdima/python-syntax'      " better python syntax
 Plug 'leafgarland/typescript-vim' " typescript syntax highlight
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -28,7 +29,8 @@ Plug 'prettier/vim-prettier', {
 Plug 'SirVer/ultisnips'
 " Snippets are separated from the engine
 Plug 'honza/vim-snippets'
-
+Plug 'luochen1990/rainbow'
+Plug 'Yggdroot/indentLine'
 
 
 "--------------------
