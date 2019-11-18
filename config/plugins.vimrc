@@ -14,7 +14,7 @@ let g:clang_close_preview = 1
 let g:rainbow_active = 1
 
 "Yggdroot/indentLine
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_char_list = ['|', '¦']
 
 
 " NERDTree
