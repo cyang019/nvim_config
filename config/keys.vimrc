@@ -6,6 +6,3 @@ map <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>. :CtrlPTag<cr>
 
 
-" tern
-" autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
-

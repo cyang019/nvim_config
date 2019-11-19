@@ -24,8 +24,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " automatic close when no window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" }}}
-" Colors {{{
+" Colors
 syntax enable
 " let g:solarized_termcolors=256
 if has('gui_running')
@@ -37,18 +36,6 @@ endif
 " colorscheme desert
 " colorscheme moonfly
 colorscheme jellybeans
-
-" }}}
-" vim-airline {{{
-
-" }}}
-" Automatic Fold
-"
-" augroup AutoSaveFolds
-"   autocmd!
-"   autocmd BufWinLeave * mkview
-"   autocmd BufWinEnter * silent loadview
-" augroup END
 
 " Snippets configurations
 let g:UltiSnipsExpandTrigger="<c-k>"

@@ -7,6 +7,9 @@ set autoindent
 set showmatch		" Show matching brackets.
 set backspace=indent,eol,start
 
+" general config
+set laststatus=2 " always show status line
+set showtabline=2 " always show tabline
 
 
 set number		" Show the line numbers on the left side.
@@ -17,17 +20,12 @@ set noerrorbells	" No beeps.
 set modeline		" Enable modeline
 
 set showcmd		" Show (partial) command in status line
-set showmode		" Show current mode
+set noshowmode " hide default mode text (e.g. INSERT) as airline already displays it
 
 set wildmenu " visual auto complete for command menu
 set guioptions-=r " remove right scrollbar
 set guioptions-=L " remove left scrollbar
 set titlestring=%{getcwd()} " set the window title to the PWD
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=10
-
 
 " start scrolling three lines before the horizontal window border
 if !&scrolloff
