@@ -28,7 +28,7 @@ Plug 'alvan/vim-closetag'
 Plug 'junegunn/vim-easy-align'
 
 " Syntax 
-Plug 'xavierd/clang_complete'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'hdima/python-syntax'      " better python syntax
 Plug 'heavenshell/vim-pydocstring'

@@ -1,14 +1,18 @@
 filetype plugin indent on
 
 let g:python3_host_prog = '/usr/local/bin/python3'
+ 
+" clang_complete
+" if has('macunix')
+"   let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+" endif
+" let g:clang_cpp_options = '-std=c++17 -stdlib=libc++'
+" let g:clang_complete = 1
+" let g:clang_snippets = 1
+" let g:clang_close_preview = 1
 
-let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-let g:clang_cpp_options = '-std=c++17 -stdlib=libc++'
-let g:clang_complete = 1
-let g:clang_snippets = 1
-let g:clang_close_preview = 1
-
-"c++ syntax highlighting
+" vim-clang
+" let g:clang_compilation_database = './build'
 
 " luochen1990/rainbow
 let g:rainbow_active = 1
