@@ -33,3 +33,7 @@ if !&scrolloff
 endif
 
 set nostartofline	" Do not jump to first character with page commands.
+
+"All status lien configuration goes here
+set cmdheight=1
+set display+=lastline

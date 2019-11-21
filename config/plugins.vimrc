@@ -2,17 +2,8 @@ filetype plugin indent on
 
 let g:python3_host_prog = '/usr/local/bin/python3'
  
-" clang_complete
-" if has('macunix')
-"   let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-" endif
-" let g:clang_cpp_options = '-std=c++17 -stdlib=libc++'
-" let g:clang_complete = 1
-" let g:clang_snippets = 1
-" let g:clang_close_preview = 1
-
-" vim-clang
-" let g:clang_compilation_database = './build'
+" YouCompleteMe
+" let g:ycm_show_diagnostics_ui = 0
 
 " luochen1990/rainbow
 let g:rainbow_active = 1
@@ -22,6 +13,10 @@ let g:indentLine_char_list = ['|', '¦']
 
 
 " NERDTree
+" Map the leader key to SPACE
+let mapleader="\<SPACE>"
+map <leader>n :NERDTreeToggle<CR>
+
 " automatic open NERDTree when open directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
@@ -40,6 +35,9 @@ endif
 " colorscheme desert
 " colorscheme moonfly
 colorscheme jellybeans
+
+"ctrlp + ctags
+nnoremap <leader>. :CtrlPTag<cr>
 
 " Snippets configurations
 let g:UltiSnipsExpandTrigger="<c-k>"
